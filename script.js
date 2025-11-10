@@ -1,24 +1,21 @@
 $(document).ready(function(){
-
     $(".filter-button").click(function(){
         var value = $(this).attr('data-filter');
         
-        if(value == "all")
-        {
+        if(value == "all") {
             $('.filter').show('1000');
         }
-        else
-        {
+        else {
             $(".filter").not('.'+value).hide('3000');
             $('.filter').filter('.'+value).show('3000');
             
         }
 
-	        	if ($(".filter-button").removeClass("active")) {
-			$(this).removeClass("active");
-		    }
-		    	$(this).addClass("active");
-	    	});
+        if ($(".filter-button").removeClass("active")) {
+            $(this).removeClass("active");
+        }
+        $(this).addClass("active");
+    });
 });
 /*	end gallery */
 
@@ -29,14 +26,34 @@ $(document).ready(function(){
     });
 });
 
-const images = ["https://picsum.photos/400/250?image=122"];
+const images = [
+    { src: './assets/foto1.jpg', category: 'category1' },
+    { src: './assets/foto2.jpg', category: 'category2' },
+    { src: './assets/foto3.jpg', category: 'category3' },
+    { src: './assets/foto4.jpg', category: 'category1' },
+    { src: './assets/foto5.jpg', category: 'category2' },
+    { src: './assets/foto6.jpg', category: 'category3' },
+    { src: './assets/foto7.jpg', category: 'category1' },
+    { src: './assets/foto8.jpg', category: 'category2' },
+    { src: './assets/foto9.jpg', category: 'category3' },
+];
 
-col.innerHTML = `
-                <div class="gallery_product col-sm-3 col-xs-6 filter category1">
-                    <a class="fancybox" rel="ligthbox" href="${image}">
-                        <img class="img-responsive" alt="" src="${image}" />
-                        <div class='img-info'>
-                        </div>
-                    </a>
-                </div>
-                `;
+const gallery = document.getElementById('gallery');
+let html = '';
+
+images.forEach( image => {
+    html += `
+            <div class="gallery_product mb-2 col-6 col-sm-3 col-xs-6 filter ${image.category}">
+                <a class="fancybox" rel="ligthbox" href="${image.src}">
+                    <img class="img-responsive w-100 h-100" alt="" src="${image.src}" />
+                    <div class='img-info'>
+                    </div>
+                </a>
+            </div>
+            `;
+});
+gallery.innerHTML = html;
+
+//Ano
+const year = document.getElementById('year');
+year.innerHTML = new Date().getFullYear();

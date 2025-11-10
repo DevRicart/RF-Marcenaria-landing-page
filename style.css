@@ -42,18 +42,18 @@
 }
 .filter-button{
     font-size: 18px;
-    border: 2px solid #3F6184;
+    border: 2px solid #5c4131;
 	padding:5px 10px;
     text-align: center;
-    color: #3F6184;
+    color: #5c4131;
     margin-bottom: 30px;
 	background:transparent;
 }
 .filter-button:hover,
 .filter-button:focus,
 .filter-button.active{
-    color: #ffffff;
-    background-color:#3F6184;
+    /* color: #ffffff; */
+    background-color:#f9f3e7;
 	outline:none;
 }
 .gallery_product{
@@ -80,4 +80,8 @@
 	display:block;
    -webkit-transition: 2s;
     transition: 2s;
+}
+
+.img-responsive {
+  width: 100px;
 }
