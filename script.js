@@ -17,7 +17,6 @@ $(document).ready(function(){
         $(this).addClass("active");
     });
 });
-/*	end gallery */
 
 $(document).ready(function(){
     $(".fancybox").fancybox({
@@ -45,7 +44,7 @@ images.forEach( image => {
     html += `
             <div class="gallery_product mb-2 col-6 col-sm-3 col-xs-6 filter ${image.category}">
                 <a class="fancybox" rel="ligthbox" href="${image.src}">
-                    <img class="img-responsive w-100 h-100" alt="" src="${image.src}" />
+                    <img class="img-responsive w-100 h-100 img-portfolio" alt="" src="${image.src}" />
                     <div class='img-info'>
                     </div>
                 </a>

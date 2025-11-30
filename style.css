@@ -25,6 +25,10 @@
   width: 100vw;
 }
 
+.about-img {
+  width: 75%;
+}
+
 .gallery-img {
   width: 100px;
   height: 100px;
@@ -59,8 +63,7 @@
 .filter-button:hover,
 .filter-button:focus,
 .filter-button.active{
-    /* color: #ffffff; */
-    background-color:#f9f3e7;
+  background-color:#f9f3e7;
 	outline:none;
 }
 .gallery_product{
@@ -98,5 +101,49 @@
 @media (min-width: 425px) {
   .banner-img {
     height: 250px;
+  }
+}
+
+@media (min-width: 768px) {
+  .banner-img {
+    height: 350px;
+  }
+
+  .filter-button {
+    font-size: 30px;
+  }
+
+  .contact {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .banner-img {
+    height: 500px;
+  }
+
+  .about-img {
+    width: 450px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .banner-img {
+    height: 600px;
+  }
+
+  .about-img {
+    width: 550px;
+  }
+
+  #about p {
+    font-size: 35px !important;
+  }
+}
+
+@media (min-width: 1920px) {
+  .banner-img {
+    height: 900px;
   }
 }
